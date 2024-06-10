@@ -4,7 +4,7 @@ import NavBar from './NavBar'
 const DeleteFisat = () => {
     const[data,setData]=useState(
         {
-            "sname":""
+            "firstname":""
         }
     )
     const inputHandler=(event)=>{
@@ -22,8 +22,8 @@ const DeleteFisat = () => {
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <div className="row g-3">
                         <div className="col col-12 col-sm-6 col-md-6 col-xl-6 col-xxl">
-                            <label htmlFor="" className="form-label">Student Name</label>
-                            <input type="text" className="form-control" name='sname'value={data.sname} onChange={inputHandler}/>
+                            <label htmlFor="" className="form-label">Student FirstName</label>
+                            <input type="text" className="form-control" name='firstname'value={data.firstname} onChange={inputHandler}/>
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                            <center> <button className="btn btn-danger" onClick={readValue}>Delete</button></center>

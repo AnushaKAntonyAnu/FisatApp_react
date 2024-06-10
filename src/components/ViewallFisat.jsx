@@ -5,7 +5,7 @@ import axios from 'axios'
 const ViewallFisat = () => {
     const[data,changeData]=useState([])
         const fetchData=()=>{
-            axios.get("https://anishpdm.github.io/dummy-api-new/student.json").then(
+            axios.get("https://courseapplogix.onrender.com/getdata ").then(
                 (response)=>{
                     changeData(response.data)
                 }
@@ -20,12 +20,12 @@ const ViewallFisat = () => {
                 <div className="row">
                     <div className="col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                         <table class="table table-striped table-hover">
-                            <table class="table">
+                            
                                 <thead>
                                     <tr>
-                                        <th scope="col">ID</th>
+                                        <th scope="col">SNO</th>
                                         <th scope="col">FIRST NAME</th>
-                                        <th scope="col">Last NAME</th>
+                                        <th scope="col">LAST NAME</th>
                                         <th scope="col">COLLEGE</th>
                                         <th scope="col">DOB</th>
                                         <th scope="col">COURSE</th>
@@ -38,7 +38,7 @@ const ViewallFisat = () => {
                                    {data.map(
                                     (value,index)=>{
                                         return <tr>
-                                        <td>{value._id}</td>
+                                       <td>{index+1}</td>
                                         <td>{value.firstname}</td>
                                         <td>{value.lastname}</td>
                                         <td>{value.college}</td>
@@ -52,7 +52,7 @@ const ViewallFisat = () => {
                                    )}
                                 </tbody>
                             </table>
-                        </table>
+                       
                     </div>
                 </div>
             </div>
